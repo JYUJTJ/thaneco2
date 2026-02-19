@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>عيد مبارك | تهنئة خاصة</title>
-    <!-- Font Awesome للأيقونات المتطايرة (ومنه الفوانيس) -->
+    <!-- Font Awesome للأيقونات المتطايرة -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -20,7 +20,7 @@
             direction: rtl;
             padding: 15px;
         }
-        /* الأيقونات المتطايرة - الفوانيس الآن هي النجم */
+        /* الأيقونات المتطايرة */
         .floating-icons {
             position: absolute;
             width: 100%;
@@ -33,19 +33,16 @@
         }
         .floating-icons i {
             position: absolute;
-            color: rgba(255, 235, 150, 0.8);  /* لون ذهبي للنجوم والأقمار */
+            color: rgba(255, 235, 150, 0.8);
             user-select: none;
             filter: drop-shadow(0 0 8px #ffb347);
-            transition: top 10s ease, left 10s ease; /* انتقال بطيء */
         }
-
         @keyframes fadeInOut {
             0% { opacity: 0; }
             20% { opacity: 1; }
             80% { opacity: 1; }
             100% { opacity: 0; }
         }
-
         /* بطاقة التهنئة */
         .eid-card {
             position: relative;
@@ -61,14 +58,12 @@
             padding: 35px 30px 45px;
             text-align: center;
         }
-
         .greeting-container {
             display: flex;
             flex-direction: column;
             align-items: center;
             gap: 15px;
         }
-
         /* صورة الهلال */
         .moon-image {
             max-width: 280px;
@@ -92,7 +87,6 @@
             border-radius: 20px;
             filter: drop-shadow(0 8px 15px #00000040);
         }
-
         .main-greeting {
             font-size: 3.2rem;
             font-weight: 700;
@@ -106,7 +100,6 @@
             font-size: 2.5rem;
             margin: 0 10px;
         }
-
         /* اسم المرسل: من {{name}} */
         .sender-box {
             background: rgba(44, 68, 58, 0.6);
@@ -133,7 +126,6 @@
             background: transparent;
             unicode-bidi: plaintext;
         }
-
         .blessing-text {
             font-size: 1.8rem;
             color: #fcf3da;
@@ -151,7 +143,6 @@
             margin: 0 8px;
             font-size: 2rem;
         }
-
         .decorative-line {
             display: flex;
             align-items: center;
@@ -171,7 +162,6 @@
             background: radial-gradient(circle, #ffdb7c, transparent);
             border-radius: 50%;
         }
-
         .footer-dua {
             font-size: 1.4rem;
             color: #dfd7b6;
@@ -182,7 +172,6 @@
             display: inline-block;
             border: 1px solid #e1b95b;
         }
-
         .custom-message {
             font-size: 1.2rem;
             color: #fef7e6;
@@ -193,7 +182,6 @@
             text-align: center;
             border: 1px solid #ffd78c;
         }
-
         @media (max-width: 500px) {
             .eid-card { padding: 25px 15px; }
             .main-greeting { font-size: 2.5rem; }
@@ -201,7 +189,6 @@
             .sender-name { font-size: 2rem; }
             .blessing-text { font-size: 1.4rem; }
         }
-
         /* زر العودة */
         .back-button-container {
             position: fixed;
@@ -232,7 +219,6 @@
             margin-left: 10px;
             color: #ffdb8e;
         }
-
         /* صندوق الرسالة المغلق */
         .message-box {
             position: relative;
@@ -269,35 +255,41 @@
             color: #ffdb8e;
             margin: 0 10px;
         }
+        /* حاويات الإعلانات */
+        .ad-container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin: 10px 0;
+        }
     </style>
     <!-- خط عربي -->
     <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- الأيقونات المتطايرة في الخلفية - تم إزالة التحريك -->
+    <!-- الأيقونات المتطايرة في الخلفية -->
     <div class="floating-icons">
-        <!-- 5 نجوم وأقمار تظهر تدريجياً -->
         <i class="fas fa-star" style="top:5%; left:10%; font-size:3rem; animation: fadeInOut 10s infinite; animation-delay: 0s;"></i>
-<i class="fas fa-moon" style="top:12%; left:85%; font-size:4rem; animation: fadeInOut 10s infinite; animation-delay: 1s;"></i>
-<i class="fas fa-star" style="top:22%; left:25%; font-size:2.2rem; animation: fadeInOut 10s infinite; animation-delay: 2s;"></i>
-<i class="fas fa-moon" style="top:35%; left:45%; font-size:3.8rem; animation: fadeInOut 10s infinite; animation-delay: 3s;"></i>
-<i class="fas fa-star" style="top:42%; left:60%; font-size:2.8rem; animation: fadeInOut 10s infinite; animation-delay: 4s;"></i>
-<i class="fas fa-star" style="top:55%; left:15%; font-size:3.5rem; animation: fadeInOut 10s infinite; animation-delay: 5s;"></i>
-<i class="fas fa-moon" style="top:68%; left:35%; font-size:4.2rem; animation: fadeInOut 10s infinite; animation-delay: 6s;"></i>
-<i class="fas fa-star" style="top:75%; left:75%; font-size:2.4rem; animation: fadeInOut 10s infinite; animation-delay: 7s;"></i>
-<i class="fas fa-moon" style="top:82%; left:55%; font-size:3.6rem; animation: fadeInOut 10s infinite; animation-delay: 8s;"></i>
-<i class="fas fa-star" style="top:92%; left:90%; font-size:3rem; animation: fadeInOut 10s infinite; animation-delay: 9s;"></i>
-<i class="fas fa-star" style="top:8%; left:40%; font-size:3.2rem; animation: fadeInOut 10s infinite; animation-delay: 0.5s;"></i>
-<i class="fas fa-moon" style="top:18%; left:70%; font-size:4.5rem; animation: fadeInOut 10s infinite; animation-delay: 1.5s;"></i>
-<i class="fas fa-star" style="top:28%; left:5%; font-size:2.6rem; animation: fadeInOut 10s infinite; animation-delay: 2.5s;"></i>
-<i class="fas fa-moon" style="top:45%; left:95%; font-size:3.9rem; animation: fadeInOut 10s infinite; animation-delay: 3.5s;"></i>
-<i class="fas fa-star" style="top:62%; left:50%; font-size:3.3rem; animation: fadeInOut 10s infinite; animation-delay: 4.5s;"></i>
-<i class="fas fa-star" style="top:72%; left:20%; font-size:2.9rem; animation: fadeInOut 10s infinite; animation-delay: 5.5s;"></i>
-<i class="fas fa-moon" style="top:88%; left:65%; font-size:4.1rem; animation: fadeInOut 10s infinite; animation-delay: 6.5s;"></i>
-<i class="fas fa-star" style="top:15%; left:80%; font-size:2.7rem; animation: fadeInOut 10s infinite; animation-delay: 7.5s;"></i>
-<i class="fas fa-moon" style="top:38%; left:12%; font-size:3.7rem; animation: fadeInOut 10s infinite; animation-delay: 8.5s;"></i>
-<i class="fas fa-star" style="top:58%; left:32%; font-size:3.1rem; animation: fadeInOut 10s infinite; animation-delay: 9.5s;"></i>
+        <i class="fas fa-moon" style="top:12%; left:85%; font-size:4rem; animation: fadeInOut 10s infinite; animation-delay: 1s;"></i>
+        <i class="fas fa-star" style="top:22%; left:25%; font-size:2.2rem; animation: fadeInOut 10s infinite; animation-delay: 2s;"></i>
+        <i class="fas fa-moon" style="top:35%; left:45%; font-size:3.8rem; animation: fadeInOut 10s infinite; animation-delay: 3s;"></i>
+        <i class="fas fa-star" style="top:42%; left:60%; font-size:2.8rem; animation: fadeInOut 10s infinite; animation-delay: 4s;"></i>
+        <i class="fas fa-star" style="top:55%; left:15%; font-size:3.5rem; animation: fadeInOut 10s infinite; animation-delay: 5s;"></i>
+        <i class="fas fa-moon" style="top:68%; left:35%; font-size:4.2rem; animation: fadeInOut 10s infinite; animation-delay: 6s;"></i>
+        <i class="fas fa-star" style="top:75%; left:75%; font-size:2.4rem; animation: fadeInOut 10s infinite; animation-delay: 7s;"></i>
+        <i class="fas fa-moon" style="top:82%; left:55%; font-size:3.6rem; animation: fadeInOut 10s infinite; animation-delay: 8s;"></i>
+        <i class="fas fa-star" style="top:92%; left:90%; font-size:3rem; animation: fadeInOut 10s infinite; animation-delay: 9s;"></i>
+        <i class="fas fa-star" style="top:8%; left:40%; font-size:3.2rem; animation: fadeInOut 10s infinite; animation-delay: 0.5s;"></i>
+        <i class="fas fa-moon" style="top:18%; left:70%; font-size:4.5rem; animation: fadeInOut 10s infinite; animation-delay: 1.5s;"></i>
+        <i class="fas fa-star" style="top:28%; left:5%; font-size:2.6rem; animation: fadeInOut 10s infinite; animation-delay: 2.5s;"></i>
+        <i class="fas fa-moon" style="top:45%; left:95%; font-size:3.9rem; animation: fadeInOut 10s infinite; animation-delay: 3.5s;"></i>
+        <i class="fas fa-star" style="top:62%; left:50%; font-size:3.3rem; animation: fadeInOut 10s infinite; animation-delay: 4.5s;"></i>
+        <i class="fas fa-star" style="top:72%; left:20%; font-size:2.9rem; animation: fadeInOut 10s infinite; animation-delay: 5.5s;"></i>
+        <i class="fas fa-moon" style="top:88%; left:65%; font-size:4.1rem; animation: fadeInOut 10s infinite; animation-delay: 6.5s;"></i>
+        <i class="fas fa-star" style="top:15%; left:80%; font-size:2.7rem; animation: fadeInOut 10s infinite; animation-delay: 7.5s;"></i>
+        <i class="fas fa-moon" style="top:38%; left:12%; font-size:3.7rem; animation: fadeInOut 10s infinite; animation-delay: 8.5s;"></i>
+        <i class="fas fa-star" style="top:58%; left:32%; font-size:3.1rem; animation: fadeInOut 10s infinite; animation-delay: 9.5s;"></i>
     </div>
 
     <!-- صندوق الرسالة المغلق -->
@@ -306,28 +298,33 @@
             <i class="fas fa-envelope"></i>
         </div>
         <div class="message-text">
-            <i class="fas fa-star"></i> انقر للفتح!  <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i> انقر للفتح! <i class="fas fa-star"></i>
         </div>
     </div>
 
-    <!-- بطاقة التهنئة -->
+    <!-- بطاقة التهنئة (مخفية في البداية) -->
     <div class="eid-card" id="eid-card" style="display: none;">
         <div class="greeting-container">
-            <!-- صورة الهلال + عيد مبارك -->
+            <!-- صورة الهلال -->
             <div class="moon-image">
                 <img src="https://png.pngtree.com/png-clipart/20230317/original/pngtree-ramadan-eid-al-fitr-mubarak-or-adha-islamic-calligraphy-with-moon-png-image_8993503.png" 
                      alt="عيد مبارك - رسم هلال">
             </div>
-            <script>
-  atOptions = {
-    'key' : '927e5c12672a735c8698e4e7d901cbfb',
-    'format' : 'iframe',
-    'height' : 250,
-    'width' : 300,
-    'params' : {}
-  };
-</script>
-<script src="https://www.highperformanceformat.com/927e5c12672a735c8698e4e7d901cbfb/invoke.js"></script>
+
+            <!-- الإعلان الأول (في أعلى البطاقة) -->
+            <div class="ad-container">
+                <script>
+                    atOptions = {
+                        'key' : '927e5c12672a735c8698e4e7d901cbfb',
+                        'format' : 'iframe',
+                        'height' : 250,
+                        'width' : 300,
+                        'params' : {}
+                    };
+                </script>
+                <script src="https://www.highperformanceformat.com/927e5c12672a735c8698e4e7d901cbfb/invoke.js"></script>
+            </div>
+
             <!-- عنوان رئيسي: عيد مبارك -->
             <div class="main-greeting">
                 <i class="fas fa-star"></i> عيد مبارك <i class="fas fa-star"></i>
@@ -339,9 +336,8 @@
                 <span class="sender-name">{{name}}</span>
             </div>
 
-            <!-- تهنئة دافئة وحقيقية -->
+            <!-- تهنئة دافئة -->
             <div class="blessing-text">
-                <script src="https://pl28745109.effectivegatecpm.com/40/2e/03/402e03d5a1f8904c4d1df3bce6b62e37.js"></script>
                 <i class="fas fa-heart"></i> 
                 كل عام وأنتم بخير، أعاده الله علينا وعليكم باليمن والبركات، وتقبل الله صالح الأعمال
                 <i class="fas fa-heart"></i>
@@ -352,51 +348,29 @@
                 <i class="fas fa-star"></i><span></span><i class="fas fa-lantern"></i><span></span><i class="fas fa-star"></i>
             </div>
 
-                        <!-- الرسالة الإضافية -->
+            <!-- الرسالة الإضافية -->
             <div class="custom-message">
-                <script src="https://pl28745109.effectivegatecpm.com/40/2e/03/402e03d5a1f8904c4d1df3bce6b62e37.js"></script>
-                <i class="fas fa-star"> </i>{{message}}<i class="fas fa-star"></i>
+                <i class="fas fa-star"></i> {{message}} <i class="fas fa-star"></i>
             </div>
 
             <!-- زخارف -->
             <div class="decorative-line">
                 <i class="fas fa-star"></i><span></span><i class="fas fa-lantern"></i><span></span><i class="fas fa-star"></i>
             </div>
-            <script src="https://pl28745109.effectivegatecpm.com/40/2e/03/402e03d5a1f8904c4d1df3bce6b62e37.js"></script>
 
-            <script>
-  atOptions = {
-    'key' : '927e5c12672a735c8698e4e7d901cbfb',
-    'format' : 'iframe',
-    'height' : 250,
-    'width' : 300,
-    'params' : {}
-  };
-</script>
-<script src="https://www.highperformanceformat.com/927e5c12672a735c8698e4e7d901cbfb/invoke.js"></script>
+            <!-- الإعلان الثاني (في أسفل البطاقة) -->
+            <div class="ad-container">
+                <script src="https://pl28745109.effectivegatecpm.com/40/2e/03/402e03d5a1f8904c4d1df3bce6b62e37.js"></script>
+            </div>
 
             <!-- دعاء الختام -->
             <div class="footer-dua">
-                <i class="fas fa-hands-praying"></i> عيد سعيد و أيام مليئة بالفرح <i class="fas fa-hands-praying"></i>
-            </div
-                <script>
-  atOptions = {
-    'key' : '927e5c12672a735c8698e4e7d901cbfb',
-    'format' : 'iframe',
-    'height' : 250,
-    'width' : 300,
-    'params' : {}
-  };
-</script>
-<script src="https://www.highperformanceformat.com/927e5c12672a735c8698e4e7d901cbfb/invoke.js"></script>
-           
-
-
+                <i class="fas fa-hands-praying"></i> عيد سعيد وأيام مليئة بالفرح <i class="fas fa-hands-praying"></i>
+            </div>
         </div>
     </div>
 
-    
-    <!-- مشغل الصوت -->
+    <!-- مشغل الصوت (مخفي) -->
     <audio style="display: none;">
         <source src="7ter_Ya_Aid.mp3" type="audio/mpeg">
         متصفحك لا يدعم تشغيل الصوت.
@@ -405,16 +379,19 @@
     <!-- زر العودة للصفحة الرئيسية -->
     <div class="back-button-container">
         <div class="custom-message">
-                <i class="fas fa-star"> </i>طورة : أ.عمرو احمد محمد<i class="fas fa-star"></i>
-            </div>
+            <i class="fas fa-star"></i> طورة: أ.عمرو احمد محمد <i class="fas fa-star"></i>
+        </div>
         <button class="back-button" onclick="window.location.href='index.html'">
             <i class="fas fa-plus-circle"></i> أنشئ تهنئة باسمك
         </button>
     </div>
 
+    <script>
+        function openMessage() {
+            // إخفاء صندوق الرسالة وإظهار بطاقة التهنئة
+            document.getElementById('message-box').style.display = 'none';
+            document.getElementById('eid-card').style.display = 'block';
+        }
+    </script>
 </body>
-
 </html>
-
-
-
